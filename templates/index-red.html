@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NousInt Red Team - Curated catalog of OSINT reconnaissance tools, offensive security frameworks, penetration testing resources, and investigative research methodologies.">
+    <meta name="keywords" content="OSINT catalog, red team tools, penetration testing, offensive security, reconnaissance, security research, OSINT resources, cybersecurity tools, threat intelligence">
+    <meta name="author" content="bellobyte">
+    <meta property="og:title" content="NousInt Red Team - OSINT & Reconnaissance Catalog">
+    <meta property="og:description" content="Curated catalog of OSINT reconnaissance tools, offensive security frameworks, and penetration testing resources">
+    <meta property="og:type" content="website">
+    <title>NousInt | OSINT Catalog</title>
+    <link rel="stylesheet" href="/static/css/redindex.css">
+    <link rel="stylesheet" href="/static/css/stars.css">
+    <link rel="icon" href="/static/images/logo.png" type="image/png">
+</head>
+<body>
+    <div class="starfield"></div>
+    <div class="container">
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <div class="left-section">
+                <div class="title-container" style="display: flex; align-items: center; gap: 20px; margin-bottom: 20px;">
+                    <img src="/static/images/logo.png" alt="NousInt Logo" style="width: 80px; height: auto;">
+                    <h1 class="main-title" style="margin-bottom: 0;">NOUSINT</h1>
+                </div>
+                <p class="subtitle">OSINT RESOURCES FOR BOTH SIDES.</p>
+                
+                <div class="description">
+                    <p><strong>NousInt is a curated catalog of OSINT and OPSEC resources</strong>, bringing reconnaissance/attacker tools, threat intelligence feeds, and privacy focused playbooks in one organized platform.</p>
+                    <p>Whether you're defending against threats (Blue Team) or conducting investigations (Red Team), NousInt provides structured access to hundreds of vetted tools, educational guides, and security resources.</p>
+                    <p>Derived from the classical concept of <em>Nous</em>: "intellect and direct awareness", NousInt cuts through the noise of the web to deliver actionable cybersecurity intelligence.</p>
+                </div>
+
+                <div class="action-section">
+                    <button class="scanner-btn" onclick="window.location.href='/scan'">
+                        SOCIAL SCANNER
+                    </button>
+                    <button class="blue-btn" onclick="window.location.href='/'">BLUE</button>
+                    <button class="red-btn">RED</button>
+                </div>
+
+                <!-- Featured Articles Section -->
+                <div class="featured-articles">
+                    <a href="/articles/protecting-against-ai-impersonation?mode=red" class="featured-article-link">
+                        <span class="featured-label">Featured Article</span>
+                        <span class="featured-separator">|</span>
+                        <span class="featured-title">Protecting against A.I Impersonation</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="right-section" style="flex-direction: column; align-items: flex-end;"> 
+                <nav class="nav-buttons" style="margin-bottom: 30px;">                    
+                    <button class="nav-btn" onclick="window.location.href='/deepscan'">DEEPFAKE SCAN</button>                    
+                    <button class="nav-btn" onclick="window.location.href='/articles?mode=red'">ARTICLES</button>                    
+                    <button class="nav-btn" onclick="window.location.href='/about'">ABOUT</button>
+                    <a href="https://github.com/bellobytes/nousint" target="_blank">
+                        <button class="nav-btn">GITHUB</button>
+                    </a>
+                </nav> 
+                <!-- Catalog Preview Container--> 
+                <div class="catalog-preview">
+                    <div class="catalog-header">
+                        <h3>OSINT Catalog Preview</h3>
+                        <button class="fullscreen-btn" onclick="window.location.href='/redcatalog'">
+                            <span>⛶</span> FULLSCREEN
+                        </button>
+                    </div>
+                    <div class="catalog-content">
+                        <div class="category-filter">
+                        </div>
+                        <div class="tools-grid">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- What's OSINT Section -->
+        <section class="osint-section">
+            <div class="osint-left">
+                <div class="youtube-embed-placeholder">
+                    <!-- YOUTUBE EMBED -->
+                    <p>YOUTUBE EMBED PLACEHOLDER</p>
+                </div>
+            </div>
+            
+            <div class="osint-right">
+                <div class="logo-full"></div>
+                <h2 class="osint-title">WHAT'S OSINT?</h2>
+                <div class="osint-content">
+                    <p>In its simplest form, OSINT (Open Source Intelligence) is the process of collecting and <strong>analyzing</strong> publicly available data. The data collected is then used to make informed decisions and assess threats or vulnerabilities.</p>
+                    
+                    <ul class="osint-list">
+                        <li><strong>For Red Team:</strong> OSINT Tools are the toolboxes used to map digital footprints and identify external vulnerabilities.</li>
+                        <li><strong>For Blue Team:</strong> OSINT is using those same investigative techniques to find and secure your systems before a threat actor does</li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+    <script src="/static/js/catalogdata.js"></script>
+    <script src="/static/js/catalogscript.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NousInt Articles - OSINT insights, tutorials, and security research articles">
+    <meta name="keywords" content="OSINT, cybersecurity articles, tutorials, security research, threat intelligence">
+    <meta name="author" content="bellobyte">
+    <meta property="og:title" content="NousInt Articles">
+    <meta property="og:description" content="OSINT insights and security research articles">
+    <meta property="og:type" content="website">
+    <title>NousInt | Articles</title>
+    <link rel="stylesheet" href="/static/css/stars.css">
+    <link rel="stylesheet" href="/static/vendor/fontawesome/css/all.min.css">
+    <link rel="icon" href="/static/images/logo.png" type="image/png">
+    <script>
+        // Detect red mode BEFORE any CSS loads and inject the correct stylesheet
+        (function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const isRedMode = urlParams.get('mode') === 'red' || document.referrer.includes('/red');
+            console.log('Articles page - Red mode:', isRedMode);
+            
+            // Load base CSS
+            const mainLink = document.createElement('link');
+            mainLink.rel = 'stylesheet';
+            mainLink.id = 'main-css';
+            mainLink.href = isRedMode ? '/static/css/redindex.css' : '/static/css/index.css';
+            document.head.appendChild(mainLink);
+            
+            // Load article-specific CSS (for article cards)
+            const articleLink = document.createElement('link');
+            articleLink.rel = 'stylesheet';
+            articleLink.id = 'article-css';
+            articleLink.href = isRedMode ? '/static/css/redarticles.css' : '/static/css/articles.css';
+            document.head.appendChild(articleLink);
+        })();
+    </script>
+</head>
+<body>
+    <div class="starfield"></div>
+    <div class="container">
+        <main class="fullscreen-catalog">
+            <div class="catalog-fullscreen">
+                <div class="catalog-header">
+                    <div class="catalog-logo" id="logoButton" style="cursor: pointer;">
+                        <div class="logo-circle"></div>
+                    </div>
+                    <h2>Articles</h2>
+                    <div class="catalog-nav">
+                        <button class="nav-catalog-btn" id="backButton">
+                            ← BACK TO MAIN
+                        </button>
+                    </div>
+                </div>
+                <div class="catalog-content">
+                    <div class="category-filter">
+                        <div class="breadcrumb-nav">
+                            <span class="breadcrumb-current">All Articles</span>
+                        </div>
+                    </div>
+                    <div class="tools-grid" id="articlesGrid">
+                        {% if articles %}
+                        <div class="tools-scroll-container">
+                            <div class="subcategory-grid">
+                            {% for article in articles %}
+                                <div class="article-card" onclick="window.location.href='/articles/{{ article.id }}' + (window.location.search.includes('mode=red') ? '?mode=red' : '')">
+                                    <div class="article-card-header">
+                                        <h3 class="subcategory-name">{{ article.title }}</h3>
+                                        <div class="subcategory-count">{{ article.date }}</div>
+                                    </div>
+                                    <p class="subcategory-description">{{ article.description }}</p>
+                                    {% if article.tags %}
+                                    <div class="article-tags-container">
+                                        {% for tag in article.tags %}
+                                        <span class="article-tag" onclick="event.stopPropagation(); /* simple tag filter or navigation could go here */">{{ tag }}</span>
+                                        {% endfor %}
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            {% endfor %}
+                            </div>
+                        </div>
+                        {% else %}
+                        <div class="selection-prompt">
+                            <p>No articles available yet.</p>
+                            <p style="margin-top: 20px; font-size: 14px; color: rgba(255,255,255,0.5);">
+                                Add markdown files to the articles/ directory to get started.
+                            </p>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+    <script src="/static/js/articles.js"></script>
+</body>
+</html>
