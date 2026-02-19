@@ -6,9 +6,9 @@ Derived from the classical concept of Nous, â€œintellect and direct awareness,â€
 
 We also have our own articles :D
 
-This is an open source and ongoing project by bellobyte.
-Art Credits: Inko Ojamist
-Created: January 2026
+This is an open source and ongoing project by bellobyte.  
+Art Credits: Inko Ojamist  
+Created: January 2026  
 Last Modified: Feb 18 2026
 # GWC Challenge
 This project addresses the GWC **Cybersecurity + AI Challenge** theme:
@@ -57,9 +57,11 @@ python main.py
 5. Navigate to http://localhost:5000
 
 # Showcase
+<img width="1917" height="906" alt="image" src="https://github.com/user-attachments/assets/3bc52713-fa99-4dad-962d-c30329ce1bc7" />
+
+# Drafts and BTS stuff
 <img width="986" height="918" alt="Screenshot From 2026-02-15 18-49-04" src="https://github.com/user-attachments/assets/4bc4e7ec-48fd-4c77-8df1-57b5370f2ccd" />
 <img width="1908" height="920" alt="image" src="https://github.com/user-attachments/assets/26ef23c7-df20-4d03-be97-2ebb8f85322d" />
-# Drafts and BTS stuff
 <img width="1856" height="1004" alt="image" src="https://github.com/user-attachments/assets/d42cc539-1030-4ae6-bf3d-ccaf449a3a47" />
 <img width="1920" height="935" alt="image" src="https://github.com/user-attachments/assets/8ef16d89-6a73-4916-adc4-0e541e98bdb7" />
 
