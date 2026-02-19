@@ -32,7 +32,6 @@
             var tag = tags[i];
             tag.style.cursor = 'pointer';
             
-            // closure for event listener
             (function(t) {
                 t.onclick = function(e) {
                     e.preventDefault();

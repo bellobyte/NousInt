@@ -7,7 +7,7 @@ Derived from the classical concept of Nous, â€œintellect and direct awareness,â€
 We also have our own articles :D
 
 This is an open source and ongoing project by bellobyte.
-Art Credits: xxx
+Art Credits: Inko Ojamist
 Created: January 2026
 Last Modified: Feb 18 2026
 # GWC Challenge
@@ -15,7 +15,7 @@ This project addresses the GWC **Cybersecurity + AI Challenge** theme:
 
 - **Problem**: AI-generated deepfakes threaten identity and trust, and many social media posts expose user PII which threaten user privacy. There is also lack of OSINT knowledge due to lack of structured knowledge bases.
 - **Solution**: Use AI and a catalog of resources to detect and protect against AI-generated threats, from automated OSINT tools to mass surveillance, as well as human threat actors. 
-- **Impact**: Empowers users to verify media authenticity before sharing, and protect their privacy.
+- **Impact**: Empowers users to verify media authenticity before sharing, and protect their privacy through education!
 # Installation
 
 1. Clone the repository:
@@ -62,3 +62,6 @@ python main.py
 # Drafts and BTS stuff
 <img width="1856" height="1004" alt="image" src="https://github.com/user-attachments/assets/d42cc539-1030-4ae6-bf3d-ccaf449a3a47" />
 <img width="1920" height="935" alt="image" src="https://github.com/user-attachments/assets/8ef16d89-6a73-4916-adc4-0e541e98bdb7" />
+
+
+And yes, I used AI to help a lot with advanced topics. It's pretty obvious, and I am not hiding it because I still learned and applied my knowledge from web security courses and programming classes! And who knew that deploying websites wasn't that hard all this time? not me :D

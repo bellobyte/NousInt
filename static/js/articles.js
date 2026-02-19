@@ -169,7 +169,7 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     document.head.appendChild(articleStyles);
 
-    var backUrl = "/";
+    let backUrl = "/";
     if (isRedMode) {
         backUrl = "/red";
     }

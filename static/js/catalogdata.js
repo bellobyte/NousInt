@@ -137,7 +137,6 @@ var db = {
             'other-toolboxes': {
                 meta: { desc: 'Other curated collections of privacy and security tools.' },
                 tools: [
-                { name: 'PrivacyTools News', url: 'https://news.privacytools.io/', cat: 'News', desc: 'Curated privacy news aggregator.' },
                 { name: 'DeGoogle', url: 'https://git.tycrek.com/archive/degoogle', cat: 'Guide', desc: 'Alternatives to Google ecosystem.' },
                 { name: 'The OSINT Toolbox', url: 'https://github.com/The-Osint-Toolbox', cat: 'Resource', desc: 'General OSINT repository.', meta: { download: true } }
             ]},
@@ -155,10 +154,8 @@ var db = {
                 { name: 'WhatsMyName', url: 'https://whatsmyname.app/', cat: 'Username', desc: 'Username enumeration tool.' },
                 { name: 'Maigret', url: 'https://github.com/soxoj/maigret', cat: 'Username', desc: 'Collect a dossier on a person by username.', meta: { download: true } },
                 { name: 'Social Analyzer', url: 'https://github.com/qeeqbox/social-analyzer', cat: 'Username', desc: 'API, CLI & Web App for analyzing profiles.', meta: { download: true } },
-                { name: 'Name-Seeker', url: 'https://github.com/funnyzak/name-seeker', cat: 'Username', desc: 'Username search tool.', meta: { download: true } },
                 { name: 'Snoop', url: 'https://github.com/snoop-project/snoop', cat: 'Username', desc: 'Forensic OSINT tool for searching nicknames.', meta: { download: true } },
                 { name: 'Recon-ng', url: 'https://github.com/lanmaster53/recon-ng', cat: 'Username', desc: 'Web Reconnaissance framework.', meta: { download: true } },
-                { name: 'SocialPath', url: 'https://github.com/Belane/SocialPath', cat: 'Username', desc: 'Tracks users across social media platforms.', meta: { download: true } }
             ]},
             email: {
                 meta: { desc: 'Discover and validate email addresses linked to targets.' },

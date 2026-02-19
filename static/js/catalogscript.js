@@ -19,7 +19,73 @@ var catalogState = {
 
 if (isRedPath || isRedBtn) {
     catalogState.mode = "red";
+    document.body.classList.add('red-mode');
 }
+
+// Stats Counter Animation
+document.addEventListener("DOMContentLoaded", function() {
+    var statsContainer = document.getElementById('statsContainer');
+    var blueCountEl = document.getElementById('blueCount');
+    var redCountEl = document.getElementById('redCount');
+
+    if (!statsContainer || !blueCountEl || !redCountEl) return;
+
+    // Calculate totals
+    var totalBlue = 0;
+    var totalRed = 0;
+
+    if (typeof db !== 'undefined') {
+        // Calculate Blue Tools
+        if (db.blue) {
+            for (var cat in db.blue) {
+                var categoryObj = db.blue[cat];
+                for (var sub in categoryObj) {
+                    if (sub !== 'meta' && categoryObj[sub].tools) {
+                        totalBlue += categoryObj[sub].tools.length;
+                    }
+                }
+            }
+        }
+        // Calculate Red Tools
+        if (db.red) {
+            for (var cat in db.red) {
+                var categoryObj = db.red[cat];
+                for (var sub in categoryObj) {
+                     if (sub !== 'meta' && categoryObj[sub].tools) {
+                        totalRed += categoryObj[sub].tools.length;
+                    }
+                }
+            }
+        }
+    }
+
+    // Animation observer
+    var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                statsContainer.classList.add('visible');
+                animateValue(blueCountEl, 0, totalBlue, 1500);
+                animateValue(redCountEl, 0, totalRed, 1500);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    observer.observe(statsContainer);
+
+    function animateValue(obj, start, end, duration) {
+        var startTimestamp = null;
+        var step = function(timestamp) {
+            if (!startTimestamp) startTimestamp = timestamp;
+            var progress = Math.min((timestamp - startTimestamp) / duration, 1);
+            obj.innerHTML = Math.floor(progress * (end - start) + start);
+            if (progress < 1) {
+                window.requestAnimationFrame(step);
+            }
+        };
+        window.requestAnimationFrame(step);
+    }
+});
 
 // DONT REMOVE TS: formats keys
 function formatName(str) {

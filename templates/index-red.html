@@ -9,9 +9,11 @@
     <meta property="og:title" content="NousInt Red Team - OSINT & Reconnaissance Catalog">
     <meta property="og:description" content="Curated catalog of OSINT reconnaissance tools, offensive security frameworks, and penetration testing resources">
     <meta property="og:type" content="website">
-    <title>NousInt | OSINT Catalog</title>
+    <title>NousInt | Red Team OSINT Catalog</title>
+    <link rel="stylesheet" href="/static/css/shared-index.css">
     <link rel="stylesheet" href="/static/css/redindex.css">
     <link rel="stylesheet" href="/static/css/stars.css">
+    <link rel="stylesheet" href="/static/css/stats.css">
     <link rel="icon" href="/static/images/logo.png" type="image/png">
 </head>
 <body>
@@ -29,8 +31,7 @@
                 
                 <div class="description">
                     <p><strong>NousInt is a curated catalog of OSINT and OPSEC resources</strong>, bringing reconnaissance/attacker tools, threat intelligence feeds, and privacy focused playbooks in one organized platform.</p>
-                    <p>Whether you're defending against threats (Blue Team) or conducting investigations (Red Team), NousInt provides structured access to hundreds of vetted tools, educational guides, and security resources.</p>
-                    <p>Derived from the classical concept of <em>Nous</em>: "intellect and direct awareness", NousInt cuts through the noise of the web to deliver actionable cybersecurity intelligence.</p>
+                    <p>Whether you're defending against threats (Blue Team) or conducting investigations (Red Team), NousInt provides structured access to vetted tools, educational guides, and security resources. We are always updating our collection, so check back regularly for new additions!</p>
                 </div>
 
                 <div class="action-section">
@@ -41,6 +42,18 @@
                     <button class="red-btn">RED</button>
                 </div>
 
+                <!-- Live Library Size Stats -->
+                <div class="stats-container" id="statsContainer">
+                    <div class="stat-box">
+                        <div class="stat-number" id="blueCount">0</div>
+                        <div class="stat-label">DEFENSIVE TOOLS (BLUE)</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number" id="redCount">0</div>
+                        <div class="stat-label">OFFENSIVE TOOLS (RED)</div>
+                    </div>
+                </div>
+
                 <!-- Featured Articles Section -->
                 <div class="featured-articles">
                     <a href="/articles/protecting-against-ai-impersonation?mode=red" class="featured-article-link">
@@ -49,9 +62,17 @@
                         <span class="featured-title">Protecting against A.I Impersonation</span>
                     </a>
                 </div>
+                <!-- Featured Articles Section -->
+                <div class="featured-articles">
+                    <a href="/articles/opsec-and-osint?mode=red" class="featured-article-link">
+                        <span class="featured-label">Featured Article</span>
+                        <span class="featured-separator">|</span>
+                        <span class="featured-title">OPSEC and OSINT</span>
+                    </a>
+                </div>
             </div>
 
-            <div class="right-section" style="flex-direction: column; align-items: flex-end;"> 
+            <div class="right-section"> 
                 <nav class="nav-buttons" style="margin-bottom: 30px;">                    
                     <button class="nav-btn" onclick="window.location.href='/deepscan'">DEEPFAKE SCAN</button>                    
                     <button class="nav-btn" onclick="window.location.href='/articles?mode=red'">ARTICLES</button>                    

@@ -98,7 +98,7 @@ For a researcher, your machine is your greatest vulnerability. To minimize attri
 
 OPSEC is about being **unaccountable to the adversary**. Whether you are protecting free speech in a dangerous environment or conducting dark web recon, your goal is to increase the difficulty for the threat actor utilizing OSINT against you.
 
-In a world of mass surveillance, privacy is a collective effort. By reducing your footprint, you don't just protect yourself; you help normalize the use of privacy tools for everyone, making it harder for AI systems to "pick a face out of the crowd."
+In a world of digital information, privacy is a collective effort. By reducing your footprint, you help normalize the use of privacy tools for everyone, making it harder for threat actors and AI systems to pick a face out of the crowd.
 
 ---
 

@@ -61,7 +61,7 @@ class SecurityHeadersMiddleware(BaseHTTPMiddleware):
             "default-src 'self'; "
             "script-src 'self' 'unsafe-inline'; "
             "style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; "
-            "img-src 'self' data: blob:; "
+            "img-src 'self' data: blob: https://*.google.com https://t1.gstatic.com https://*.gstatic.com; "
             "font-src 'self' data: blob: https://cdnjs.cloudflare.com; "
             "connect-src 'self'; "
             "frame-ancestors 'none'; "
@@ -97,6 +97,9 @@ async def readRedCatalog(): return FileResponse("templates/redcatalog.html")
 
 @app.get("/about")
 async def readAbout(): return FileResponse("templates/about.html")
+
+@app.get("/privacy")
+async def readPrivacy(): return FileResponse("templates/privacy.html")
 
 @app.get("/deepscan")
 async def readDeepScan():return FileResponse("templates/deepscan.html")
@@ -350,14 +353,13 @@ async def scanPost(
 
 # same structure as above but separated ais for more thorough analysis
 # also wanted to have fun with different apis heeeeeeeh
-DEEPSCAN_MAX_SIZE = 20 * 1024 * 1024
 DEEPSCAN_ALLOWED_MIME = {'image/jpeg', 'image/png'}
 DEEPSCAN_ALLOWED_EXT  = {'.jpg', '.jpeg', '.png'} # no webp because hf doesnt support
 
 async def validateDeepScanUpload(image: UploadFile) -> bytes:
     imageBytes = await image.read()
-    if len(imageBytes) > DEEPSCAN_MAX_SIZE:
-        raise HTTPException(status_code=413, detail=f"FILE TOO LARGE. Max {DEEPSCAN_MAX_SIZE//(1024*1024)}MB")
+    if len(imageBytes) > MAX_FILE_SIZE:
+        raise HTTPException(status_code=413, detail=f"FILE TOO LARGE. Max {MAX_FILE_SIZE//(1024*1024)}MB")
     ext = os.path.splitext(image.filename)[1].lower()
     if ext not in DEEPSCAN_ALLOWED_EXT:
         raise HTTPException(status_code=400, detail="INVALID EXTENSION: JPEG PNG only")

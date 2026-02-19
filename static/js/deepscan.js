@@ -1,5 +1,3 @@
-
-// Starfield background effect (adapted from script.js)
 (function() {
     var style = document.createElement('style');
     var stars = [];
