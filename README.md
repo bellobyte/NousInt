@@ -8,10 +8,17 @@
 
 We also have a multi-modal PII scanner, multi _model_ deepfake scanner, and our own articles :D
 
-This is an open source and ongoing project by bellobyte.  
-Art Credits: Inko Ojamist  
-**Created**: January 2026
-**Status**: Initial development done. Now adding more tools, making a video for the placeholder, trying to make tool db easier to manage with markdown, finding new features to add, organizing topics to cover in articles like physical counter surveillance tactics/threat analysis/other stuff. 
+This is an open source and ongoing project by **bellobyte**.    
+**Art Credits:** Inko Ojamist    
+
+**Created**: January 2026  
+**Status**
+- ☑️ Initial development done!! Now adding on more features.
+- Adding more tools
+- Making a video for the placeholder
+- Make tool db easier to manage with markdown
+- Organizing topics to cover in articles like physical counter surveillance tactics/threat analysis/other stuff!
+- Finding other new features to add :p
 
 
 ### 🌐 **Live Site**: [nousint-cd55bda4eead.herokuapp.com](https://nousint-cd55bda4eead.herokuapp.com/) (soon to be nousint.app c:)
@@ -20,7 +27,7 @@ Art Credits: Inko Ojamist
 
 - [Features](#-features)
 - [Showcase](#showcase)
-- [GWC Challenge](#gwc-challenge)
+- [GWC Challenge](#-gwc-challenge)
 - [Technical Stack](#technical-stack)
 - [Local Development](#local-development-optional)
 - [Contributing](#-contributing)
@@ -39,6 +46,7 @@ Art Credits: Inko Ojamist
 # Showcase
 <img width="1917" height="906" alt="image" src="https://github.com/user-attachments/assets/3bc52713-fa99-4dad-962d-c30329ce1bc7" />
 <img width="1845" height="937" alt="image" src="https://github.com/user-attachments/assets/a5c9b6ee-7204-4294-88ef-40f1b3508026" />
+<img width="1845" height="937" alt="image" src="https://github.com/user-attachments/assets/cbc4dd97-9bcc-44bd-a50b-5a2cc5a21119" />
 
 
 <sub> And yes, I used AI to help a lot with advanced topics. It's pretty obvious, and I am not hiding it because I still learned and applied my knowledge from web security courses and programming classes! And who knew that integrating apis and deploying websites wasn't that hard all this time? not me :D </sub>
