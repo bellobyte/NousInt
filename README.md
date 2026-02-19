@@ -4,7 +4,7 @@ Derived from the classical concept of Nous, â€œintellect and direct awareness,â€
 
 **NousInt is a curated catalog of OSINT and OPSEC resources, bringing reconnaissance tools, threat intelligence feeds, and privacy focused playbooks in one organized platform.**
 
-We also have our own articles :D
+We also have our own articles, a PII scanner, and multi modal deepfake scanner :D
 
 This is an open source and ongoing project by bellobyte.  
 Art Credits: Inko Ojamist  
